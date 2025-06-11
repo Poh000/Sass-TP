@@ -18,7 +18,7 @@ footer, .attention {
   background-color: #ebe2d7;
 }
 
-footer .footerGauche, footer .footerTitle, .container .monocco, .primaryNav .navLeft, .primaryNav h1 {
+footer .footerGauche, footer .footerTitle, .container .sectionLeft, .primaryNav .navLeft, .primaryNav h1 {
   grid-column: 2;
 }
 
@@ -81,15 +81,15 @@ img {
 .container section h2 {
   color: #7c925e;
 }
-.container .monocco {
+.container .sectionLeft {
   margin-right: 10%;
   display: flex;
   flex-direction: column;
 }
-.container .monocco img {
+.container .sectionLeft img {
   width: 100%;
 }
-.container .monocco p {
+.container .sectionLeft p {
   position: relative;
   left: -50px;
   top: -50px;

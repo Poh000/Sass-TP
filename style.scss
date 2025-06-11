@@ -108,7 +108,7 @@ img {
 
     @include grid(4, 1);
 
-    .monocco {
+    .sectionLeft {
         @extend %col2;
         margin-right: 10%;
         display: flex;
