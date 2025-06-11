@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/********************************
+            VARIABLES
+********************************/
+footer, .attention {
+  color: #7c925e;
+  background-color: #ebe2d7;
+}
+
+footer .footerGauche, footer .footerTitle, .container .monocco, .primaryNav .navLeft, .primaryNav h1 {
+  grid-column: 2;
+}
+
+.footerDroit, footer .footerGauche, .primaryNav .navRight {
+  grid-row: 2;
+}
+
+img {
+  width: 40%;
+}
+
+.attention {
+  text-align: center;
+  padding: 5px;
+}
+
+.primaryNav {
+  color: #7c925e;
+  background-color: #fbf9f7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  padding: 30px 0;
+  border-bottom: 5px solid #6d6d6d;
+}
+.primaryNav h1 {
+  grid-row: 1;
+  margin-bottom: 0;
+  font-size: 2em;
+}
+.primaryNav .navLeft {
+  align-self: center;
+}
+.primaryNav .navLeft a {
+  text-decoration: none;
+  color: #6d6d6d;
+  padding-right: 10%;
+}
+.primaryNav .navRight {
+  grid-column: 4;
+}
+.primaryNav .navRight img {
+  width: 8%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, auto);
+}
+.container section {
+  margin: 10% 0;
+}
+.container section h2 {
+  color: #7c925e;
+}
+.container .monocco {
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.container .monocco img {
+  width: 100%;
+}
+.container .monocco p {
+  position: relative;
+  left: -50px;
+  top: -50px;
+  color: #6d6d6d;
+  background-color: #ebe2d7;
+  padding: 5%;
+}
+.container .articles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+.container .articles img {
+  float: left;
+  margin-right: 5px;
+}
+.container .articles p {
+  color: #6d6d6d;
+  background-color: none;
+}
+
+footer {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2%;
+}
+footer input {
+  width: 80%;
+  padding: 2%;
+  margin: 2% 0;
+}
+
+.footerDroit {
+  grid-column: 3;
+}
+.footerDroit input {
+  width: 100%;
+  padding: 1%;
+  color: #fbf9f7;
+  background-color: #7c925e;
+}/*# sourceMappingURL=style.css.map */

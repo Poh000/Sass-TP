@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/********************************
+            VARIABLES
+********************************/
+//Couleurs
+$primaryColor: #7c925e;
+$secondaryColor: #6d6d6d;
+$tertiaryColor: #ebe2d7;
+$headerColor: #fbf9f7;
+
+@mixin Theme($textColor, $bgColor) {
+    color: $textColor;
+    background-color: $bgColor;
+}
+
+@mixin grid($col, $row) {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+    grid-template-rows: repeat($row, auto);
+}
+
+%theme {
+    @include Theme($primaryColor, $tertiaryColor);
+}
+
+%col2 {
+    grid-column: 2;
+}
+
+%row2 {
+    grid-row: 2;
+}
+
+img {
+    width: 40%;
+}
+
+.attention {
+    @extend %theme;
+    text-align: center;
+    padding: 5px;
+}
+
+.primaryNav {
+    @include Theme($primaryColor, $headerColor);
+    @include grid(4, 2);
+    padding: 30px 0;
+    border-bottom: 5px solid $secondaryColor;
+
+    h1 {
+        @extend %col2;
+        grid-row: 1;
+        margin-bottom: 0;
+        font-size: 2em;
+    }
+
+    .navLeft {
+        @extend %col2;
+        align-self: center;
+
+        a {
+            text-decoration: none;
+            color: #6d6d6d;
+            padding-right: 10%;
+        }
+    }
+
+    .navRight {
+        grid-column: 4;
+        @extend %row2;
+
+        img {
+            width: 8%;
+        }
+    }
+}
+
+.container {
+    section {
+        margin: 10% 0;
+
+        h2 {
+            color: $primaryColor;
+        }
+    }
+
+    @include grid(4, 1);
+
+    .monocco {
+        @extend %col2;
+        margin-right: 10%;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            position: relative;
+            left: -50px;
+            top: -50px;
+            @include Theme($secondaryColor, $tertiaryColor);
+            padding: 5%;
+        }
+    }
+
+    .articles {
+        @include grid(2, 2);
+        gap: 10px;
+
+        img {
+            float: left;
+            margin-right: 5px
+        }
+
+        p {
+            @include Theme($secondaryColor, none);
+        }
+    }
+}
+
+footer {
+    padding: 2%;
+    @extend %theme;
+    @include grid(4, 2);
+    gap: 2%;
+
+    .footerTitle {
+        @extend %col2;
+    }
+
+    .footerGauche {
+        @extend %col2;
+        @extend %row2;
+    }
+
+    input {
+        width: 80%;
+        padding: 2%;
+        margin: 2% 0;
+    }
+}
+
+.footerDroit {
+    grid-column: 3;
+    @extend %row2;
+
+    input {
+        width: 100%;
+        padding: 1%;
+        @include Theme($headerColor, $primaryColor);
+    }
+}
